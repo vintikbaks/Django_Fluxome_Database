@@ -90,7 +90,6 @@ https://docs.djangoproject.com/en/3.1/
 https://www.geeksforgeeks.org/rendering-data-frame-to-html-template-in-table-view-using-django-framework/
 
 Special thanks to Professor Maurice Cheung of Yale-NUS College for the support and guidance in this project.
-------------------------------------
 
 
 

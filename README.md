@@ -50,21 +50,27 @@ DJANGO ESSENTIAL FILES AND OPERATIONS
 The Django version used in this project is 3.1.
 
 1. settings.py
+
 This is a place to add new apps if they are created within the Django project. Apart from that, it contains the path to the database configuration file. Place the "my.cnf" configuration file on a local machine and provide the path to it in the relevant section of the DATABASES dictionary. When working with design, provide the path to the static CSS files in STATIC_URL and STATICFILES_DIRS.
 
 2. urls.py (both global and within the 'queries' app)
+
 This is a place to work with the links to HTML templates found within the project. So far, the project only contains two pages - home and "/queries/". The "/queries/" directory contains a search form and sample flux entries. By clicking on hyperlinks produced as a result of search queries, one can see more detailed information about each individual reaction. To extend project functionality and add new pages, create more HTML templates and place them in the "templates" folder. After that, make relevant changes to the "urls.py" file to establish the desired relationship between HTML templates.
 
 3. models.py
+
 As mentioned earlier, new datasets can be added by creating more models in this file. Existing models can be altered too. After making changes to the model classes and changing to the project directory in the terminal window, run "python manage.py makemigrations" and then "python manage.py migrate" for the changes to take effect. It is easier to create models from scratch though, as there might be some difficulties with providing default values for newly added fields.
 
 4. views.py
+
 This project makes use of function-based views to collect data from and pass it to HTML templates. The "index" function in particular accepts an argument from the search form and contains SQL queries to search the first and second datasets separately. Changes can be made to combine these queries into one. However, the newest versions of the filtered datasets need to be uploaded first. Custom SQL queries should be written here. It is also possible to collect data from various forms in the HTML templates and use it to filter SQL query results.
 
 5. static.py
+
 This file contains the CSS design settings. As of now, the project utilizes a basic Bootstrap template available at https://startbootstrap.com/template/simple-sidebar. More elaborate design templates can be found on the same website or elsewhere online. For further user interaction features, JavaScript functionality can be added in the future.
 
 6. admin.py
+
 This file determines which models are available for editing from the administrator side of the project. The admin interface can be accessed at "/admin/". Users can be created in the terminal window. Database records can be created, deleted, or altered from the admin side. See the Django documentation (version 3.1) for additional functionality.
 
 

@@ -1,0 +1,23 @@
+<h1>{{ query2.flux_name }}</h1>
+<ul>
+	<li>Description: {{ query2.description }}</li>
+	<li>Reaction type: {{ query2.reaction_type }}</li>
+	<li>Standard O2 Net Flux: {{ query2.standard_o2_net_flux }}</li>
+	<li>Elevated O2 Net Flux: {{ query2.elevated_o2_net_flux }}</li>
+</ul>
+
+
+
+<!-- flux_name = models.CharField(max_length=120)
+description = models.CharField(max_length=120)
+reaction_type = models.CharField(max_length=120)
+standard_o2_net_flux = models.DecimalField(max_digits=50, decimal_places=5)
+elevated_o2_net_flux = models.DecimalField(max_digits=50, decimal_places=5)
+standard_o2_net_flux_sd = models.DecimalField(max_digits=50, decimal_places=5)
+elevated_o2_net_flux_sd = models.DecimalField(max_digits=50, decimal_places=5)
+standard_o2_exchange_flux = models.DecimalField(max_digits=50, decimal_places=5)
+elevated_o2_exchange_flux = models.DecimalField(max_digits=50, decimal_places=5)
+standard_o2_exchange_flux_lb = models.DecimalField(max_digits=50, decimal_places=5)
+elevated_o2_exchange_flux_lb = models.DecimalField(max_digits=50, decimal_places=5)
+standard_o2_exchange_flux_ub = models.DecimalField(max_digits=50, decimal_places=5)
+elevated_o2_exchange_flux_ub = models.DecimalField(max_digits=50, decimal_places=5) -->

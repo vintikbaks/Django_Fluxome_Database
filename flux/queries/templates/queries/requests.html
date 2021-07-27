@@ -1,0 +1,90 @@
+{% extends "queries/base.html" %}
+
+{% block content %}
+
+<form method="GET" action="" id="search_form"> {% csrf_token %}
+<input type="text" name="q" class="searchfield" id="search_box" value="{{ request.GET.q }}" placeholder="Search reactions...">&emsp;
+
+<!-- Filter 1 -->
+<label for="dataset">Pick dataset:</label>
+<select id="dataset" name="cars">
+  <option value="data_1">1</option>
+  <option value="data_2">2</option>
+</select>&emsp;
+
+<!-- Filter 2 -->
+<label for="custom">Custom filter:</label>
+<select id="custom" name="cars">
+  <option value="option_1">Option 1</option>
+  <option value="option_2">Option 2</option>
+  <option value="option_3">Option 3</option>
+</select>
+</form>
+<button type="submit" form="search_form" value="Submit">Submit</button>
+
+<br>
+
+<h1>Query results</h1>
+
+<!-- Search form functionality -->
+{% if request_data %}
+	{% for res in request_data %}
+	<li><a href="{% url 'queries:detail' res.id %}">{{ res.flux_name }}</a></li>
+	{% endfor %}
+{% else %}
+	<p>No records found by name.</p>
+{% endif %}
+
+<!-- Search form functionality -->
+{% if request_data2 %}
+	{% for res in request_data2 %}
+	<li><a href="{% url 'queries:detail2' res.id %}">{{ res.flux_name }}</a></li>
+	{% endfor %}
+{% else %}
+	<p>No records found by description.</p>
+{% endif %}
+
+<br>
+<br>
+
+<h1>Sample entries</h1>
+
+<table>
+<tr>
+	{% for col in columns %}
+		<th>{{ col }}&emsp;</th>
+	{% endfor %}
+</tr>
+{% for row in rows %}
+	<tr>
+		<!-- Find a way to avoid hardcoding here -->
+		<td>{{ row.0 }}&emsp;</td>
+		<td>{{ row.1 }}&emsp;</td>
+		<td>{{ row.2 }}&emsp;</td>
+		<td>{{ row.3 }}&emsp;</td>
+		<td>{{ row.4 }}&emsp;</td>
+		<td>{{ row.5 }}&emsp;</td>
+		<td>{{ row.6 }}&emsp;</td>
+		<td>{{ row.7 }}&emsp;</td>
+		<td>{{ row.8 }}&emsp;</td>
+		<td>{{ row.9 }}&emsp;</td>
+		<td>{{ row.10 }}&emsp;</td>
+		<td>{{ row.11 }}&emsp;</td>
+		<td>{{ row.12 }}&emsp;</td>
+		<td>{{ row.13 }}&emsp;</td>
+		<td>{{ row.14 }}&emsp;</td>
+		<td>{{ row.15 }}&emsp;</td>
+		<td>{{ row.16 }}&emsp;</td>
+		<td>{{ row.17 }}&emsp;</td>
+		<td>{{ row.18 }}&emsp;</td>
+		<td>{{ row.19 }}&emsp;</td>
+		<td>{{ row.20 }}&emsp;</td>
+		<td>{{ row.21 }}&emsp;</td>
+		<td>{{ row.22 }}&emsp;</td>
+		<td>{{ row.23 }}&emsp;</td>
+		<td>{{ row.24 }}&emsp;</td>
+	</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

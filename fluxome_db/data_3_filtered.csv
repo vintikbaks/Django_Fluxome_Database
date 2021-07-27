@@ -1,5 +1,0 @@
-flux_name,reaction_id,description,db_name,net_flux,net_flux_SD,exchange_flux,exchange_flux_SD
-ppp1,21,OPPP oxidative plastid,HP_PP_p,208,18,0,0
-ppp2,23,OPPP nonoxidative to TP plastid,PP_TP_p,70,6,0,10
-ppp4,22,OPPP nonoxidative to HP plastid,PP_HP_p,68,6,57,10
-CO2,2,CO2 exchange,CO2_ex,1183,64,0,0

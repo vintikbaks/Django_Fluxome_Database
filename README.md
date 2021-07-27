@@ -78,10 +78,15 @@ In the future, it would be a significant improvement to standardize data preproc
 ACKNOWLEDGMENTS
 ------------------------------------
 Tutorials used while setting up the Django functionality of the project:
+
 https://www.youtube.com/watch?v=NbsRVfLCE1U
+
 https://www.youtube.com/watch?v=SNyCV8vOr-g
+
 https://www.youtube.com/watch?v=F5mRW0jo-U4
+
 https://docs.djangoproject.com/en/3.1/
+
 https://www.geeksforgeeks.org/rendering-data-frame-to-html-template-in-table-view-using-django-framework/
 
 Special thanks to Professor Maurice Cheung of Yale-NUS College for the support and guidance in this project.
